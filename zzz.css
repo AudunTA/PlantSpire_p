@@ -1,0 +1,19 @@
+.wrapper-container {
+    height: 100vh;
+    width: 100%;
+
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.container {
+    position: absolute;
+    display: flex;
+    background-color: aqua;
+    margin: 20px;
+    height: 200px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+    <title></title>
+    <link rel="icon" href="/images/logo.png" />
+</head>
+<body>
+    <header class="header">
+        <a href="index.html"> <div class="header-container">
+            <div class="nav-item">
+            <img src="/images/logo.png" id="logo">
+            </div>
+            <div class="nav-item">
+            <h2>PlantSpire</h2>
+            </div>
+            </div></a>
+            <div class="navigation-items">
+                <div class="nav-item">
+                    <a href="posts.html"id="nav-item" >Posts</a>
+                </div>
+                <div class="nav-item">
+                <a href="contact.html" id="nav-item">Contact</a>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" id="nav-item">About</a>
+                </div>
+                <div class="nav-item nav-menu">
+                <i class="fa-duotone fa-bars-sort"></i>
+
+                </div>
+                
+
+               
+                
+            </div>
+    </header>
+    <div class="white"></div>
+    <div class="hamburger-menu">
+        <div class="close-icon">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="nav-hamburger">
+            <a href="index.html"><h2>Home</h2></a>
+
+            <a href="posts.html"><h2>Posts</h2></a>
+
+         <a href="contact.html"><h2>Contact</h2></a>
+
+        <a href="about.html"><h2>About</h2></a>
+        </div>
+
+    </div>
+    
+    <div class="container-spes">
+        <div class="loader"></div>
+    </div>
+    
+    <div id="myModal" class="modal">
+        <span class ="close">&times;</span>
+        <img class="modal-content" id="img-modal">
+        <div id="caption"></div>
+    </div>
+    <div class="comment-section">
+        <div class="comment-title">
+            <h2>Leave a comment</h2> 
+        </div>
+       
+        <form id="comment-form">
+
+            <div class="flex-divv">
+                <div class="wrapper-comments">
+                    <label for="cemail"></label><br>
+                    <input type="text" id="cemail" name="femail" placeholder="Email address">
+                    <br><br>
+                    <div class="form-error-s" id="emailError">Your email is not valid</div>
+            <label id="txt-contact" for="cname"></label ><br>
+            <input type="text" id="cname" name="fname"  placeholder="Name">
+            <div class="form-error-s" id="firstNameError">name must contain atleast 5 characters</div>
+             <input type="text" id="ccomment" name="ccomment"  placeholder="Comment...">
+            <div class="form-error-s" id="commentError">comment must be atleast 15 characters</div>
+            <button id="button-comment">Submit</button>
+            <div class="validationMessage"></div>
+
+            </div>
+              
+          </form>
+    </div>
+    <span class="comment-status"><h2>currently no comments on this post, be the first!</h2></span>
+    <div class="comments">
+
+    </div>
+
+</div>
+</body>
+<footer id="footer-margin">
+    <div class="wrapper-footer">
+    <div class="footer-container">
+        <div class="social-icons">
+            <img src="/images/twitter-icon.png" id ="social-icons">
+            <img src="/images/instagram-icon.png" id="social-icons">
+        </div>
+
+            <div class="arrow-up">
+            <img class="scroll-up"src="/images/arrow-up.png" id="social-icons">
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+<script src="/js/header.js"></script>
+<script src="/js/spesific.js"></script>
+</html>
