@@ -543,6 +543,10 @@ text-align: center;
     }
 
     .wrapper-contact {
+        position: relative;
+        top: 0%;
+        left: 0%;
+        transform: translate(-0%, -0%);
         width: 100%;
         margin-top: 10px;
         height: 750px;
@@ -658,7 +662,6 @@ color: #FFFFFF;
     width: 100%;
     height: 100%;
     overflow: auto; 
-    background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.7); 
   }
 
@@ -745,6 +748,7 @@ color: #FFFFFF;
 
 
 .neste:hover, .siste:hover {
+    color: white;
   background-color: var(--primary-darkblue);
 }
 

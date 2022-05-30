@@ -144,7 +144,7 @@ const commentStatus = document.querySelector(".comment-status");
   </div>
   </div>`;
  }
-
+//contact form queryselectos
  const fname = document.querySelector("#cname");
 const auth_email = document.querySelector("#cemail");
 const auth_comment = document.querySelector("#ccomment");
@@ -155,10 +155,12 @@ const nameError = document.querySelector("#firstNameError");
 const emailError = document.querySelector("#emailError");
 
 form.addEventListener("submit", handleCommentSubmit);
-
+// handling input errors as i did in contact.js
 function handleCommentSubmit() {
+  //preventing default
   event.preventDefault();
   console.log(fname.value);
+  //checks values and handling erros
   if(checkLen(fname.value, 5) === true) {
     nameError.style.display = "none";
 } else {
@@ -183,13 +185,15 @@ if(!(validateEmail(auth_email.value)) || !(checkLen(auth_comment.value, 15)) || 
   console.log("failed");
 }
 else {
+  //if everything alright posting commennt
   postComment();
 }
 
 }
-
+//post comment function
 function postComment() {
   let postID = id;
+  //data i want to post
   const data = JSON.stringify( {
     post: postID,
     author_name: fname.value,
@@ -199,15 +203,18 @@ function postComment() {
   
   
   const post_url = `https://eksamen.audun.site/wp-json/wp/v2/comments`;
+  //url fetch and post method
   fetch(post_url, {
     method: 'post', 
     headers: {
       'content-Type': 'application/json',
     },
+    //data in the body
     body: data,
   })
   .then((response) => {
     if (response.ok === true) {
+      //reloads page if comment is posted to update the display
      document.location.reload (true); 
     }
     return response.json();
