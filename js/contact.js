@@ -59,7 +59,7 @@ function handleSubmit() {
 
 //check lenght function tha's called further up.
 function checkLen(value, len) {
-    if(value.trim().length >= len)   {
+    if(value.trim().length > len)   {
         //if the value.trim (removes spaces) is longer than the lenght it will return true.
         console.log("true");
         return true;

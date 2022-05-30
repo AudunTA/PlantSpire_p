@@ -63,7 +63,7 @@ margin-bottom: 50%;
     margin-top: 20px;
   }
 
-
+/*links, hovers style */
     a, a:hover, a:focus, a:active {
         text-decoration: none;
         color: inherit;
@@ -281,8 +281,11 @@ font-size: 20px;
 /* footer - desktop */
 footer {
     position: absolute;
-    bottom: 0;
+    bottom:0px;
     width: 100%;
+}
+#fixed-footer {
+    position: fixed;
 }
 #footer-margin {
     bottom: -70px;
@@ -523,6 +526,9 @@ text-align: center;
 }
 
  @media only screen and (max-width: 800px) {
+     #body-contact {
+        min-height: 120vh;
+    }
     .navigation-items {
         font-size: 25px;
     }
@@ -657,7 +663,7 @@ color: #FFFFFF;
   }
 
 
-  .modal-content {
+  .modalDiv{
     margin: auto;
     display: block;
     width: 80%;
@@ -674,7 +680,7 @@ color: #FFFFFF;
       display: block;
   }
  
-.modal-content {
+.modalDiv{
     z-index: 97;
 }
 
@@ -692,6 +698,9 @@ color: #FFFFFF;
 
 
 }
+.dotDiv {
+    text-align:center
+}
 .slideshow-container img {
     object-fit: contain;
     height: 300px;
@@ -703,33 +712,21 @@ color: #FFFFFF;
 }
 
 
-.prev, .next {
+.siste, .neste{
   cursor: pointer;
   position: absolute;
   top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: var(--primary-blue);
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
   user-select: none;
+  width: auto;
+  margin-top: -20px;
+  padding: 17px;
+  color: var(--primary-blue);
+  font-size: 19px;
+  transition: 0.6s ease;
+  border-radius: 1 4px 5px 0;
+
 }
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-
-.prev:hover, .next:hover {
-  background-color: var(--primary-darkblue);
-}
-
-
-.text {
+.alt_text {
 
   color: black;
   font-size: 20px;
@@ -738,7 +735,20 @@ color: #FFFFFF;
   bottom: -10px;
   width: 100%;
   text-align: center;
+  margin-bottom:10px
 }
+
+.neste {
+  right: 0;
+  border-radius: 1 4px 5px 0;
+}
+
+
+.neste:hover, .siste:hover {
+  background-color: var(--primary-darkblue);
+}
+
+
 
 
 
@@ -754,7 +764,7 @@ color: #FFFFFF;
   background-color: rgb(143, 138, 138);
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.3s ease;
 }
 
 .active, .circle:hover {
@@ -762,24 +772,7 @@ color: #FFFFFF;
 }
 
 
-.slide-animation {
-  animation-name: fade;
-  animation-duration: 1.2s;
-}
 
-@keyframes slide-animation {
-  from {opacity: 
-    .3
-    }
-  to {
-      opacity: 1
-    }
-}
-.slide-animation img {
-
-    max-height: 300px;
-    width: 100%;
-}
 
 /*LOADER */
 .loader {

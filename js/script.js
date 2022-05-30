@@ -25,19 +25,19 @@ async function sliderAPI() {
 
     }finally {
       //the slider content is added after the posts in the html, this was easier to style this way.
-      slider.innerHTML += `        <a class="prev" onclick="plusSlides(-1)">❮</a>
-      <a class="next" onclick="plusSlides(1)">❯</a>
+      slider.innerHTML += `        <a class="siste" onclick="plusSlides(-1)">❮</a>
+      <a class="neste" onclick="plusSlides(1)">❯</a>
       
       </div>
       <br>
       
-      <div style="text-align:center">
-        <span class="circle" onclick="currentSlide(1)"></span> 
-        <span class="circle" onclick="currentSlide(2)"></span> 
-        <span class="circle" onclick="currentSlide(3)"></span> 
+      <div class ="dotDiv">
+        <span class="circle" onclick="denneSlide(1)"></span> 
+        <span class="circle" onclick="denneSlide(2)"></span> 
+        <span class="circle" onclick="denneSlide(3)"></span> 
       </div>`; 
       //i had to call this function in the finally statement as the posts displayd were not yet defined.
-      showSlides(count);  
+      visSlides(count);  
     }
 }
 
@@ -75,11 +75,11 @@ async function getMedia(id) {
       let img ="hei";
       const yup = post.id;
       if (image) 
-      img = `<img src='${image.media_details.sizes.medium.source_url}' alt="${image.alt_text}" style="width:30%"/>`;
+      img = `<img src='${image.media_details.sizes.medium.source_url}' alt="${image.alt_text}"/>`;
       return `  <div class="mSlide slide-animation">
       <a href="spesific-post.html?id=${post.id}">
       ${img}
-      <div class="text" style="margin-bottom:10px"><p>${image.alt_text}</p> </div>
+      <div class="alt_text"><p>${image.alt_text}</p> </div>
     </div>
   `;
     
@@ -93,31 +93,34 @@ async function getMedia(id) {
 
 
 function plusSlides(x) {
-  showSlides(count += x);
+  visSlides(count += x);
 }
 
 
-function currentSlide(x) {
-  showSlides(count = x);
+function denneSlide(x) {
+  visSlides(count = x);
 }
 
-function showSlides(x) {
+function visSlides(x) {
+
   let i;
-  let slides = document.getElementsByClassName("mSlide");
-  let circles = document.getElementsByClassName("circle");
-  if (x > slides.length) {
+let circles = document.getElementsByClassName("circle");
+  let allSlide = document.getElementsByClassName("mSlide");
+
+  
+  if (x > allSlide.length) {
     count = 1
   }
   if (x < 1) {
-    count = slides.length
+    count = allSlide.length
   }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  for (i = 0; i < allSlide.length; i++) {
+    allSlide[i].style.display = "none";
   }
   for (i = 0; i < circles.length; i++) {
     circles[i].className = circles[i].className.replace(" active", "");
   }
-  slides[count-1].style.display = "block";
+  allSlide[count-1].style.display = "block";
   circles[count-1].className += " active";
 }
 
