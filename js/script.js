@@ -11,6 +11,7 @@ async function sliderAPI() {
     try{
         const response = await fetch(url);
         const result = await response.json();
+        //empties container
         slider.innerHTML="";
         console.log("inne");
         
@@ -41,6 +42,7 @@ async function sliderAPI() {
     }
 }
 
+//display post function
 async function displayPost(post) {
     try {
                 console.log("inne");
@@ -107,7 +109,8 @@ function visSlides(x) {
 let circles = document.getElementsByClassName("circle");
   let allSlide = document.getElementsByClassName("mSlide");
 
-  
+  //what slides will be displayed and what slides will not be displayed
+
   if (x > allSlide.length) {
     count = 1
   }
@@ -115,11 +118,14 @@ let circles = document.getElementsByClassName("circle");
     count = allSlide.length
   }
   for (i = 0; i < allSlide.length; i++) {
+    //setting display style to none
     allSlide[i].style.display = "none";
   }
   for (i = 0; i < circles.length; i++) {
+    
     circles[i].className = circles[i].className.replace(" active", "");
   }
+  //setting display to block and gives the dot another class "active"
   allSlide[count-1].style.display = "block";
   circles[count-1].className += " active";
 }
@@ -141,13 +147,16 @@ function handleSignUp() {
    vEmail.innerHTML = `You signed up for the newsletter`;
     console.log("inne");
 } else {
+  //displays error
   vEmail.innerHTML = `This email is invalid`;
 }
 }
-
+//validate email regex
 function validateEmail(email) {
   console.log(email);
+  //regex
   const regEx = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/;
+  //matching
   const matching = regEx.test(email);
   console.log(matching);
   //returns true or false
