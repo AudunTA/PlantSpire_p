@@ -1,4 +1,4 @@
-# International Sience Museum Kristiansand 
+# PlantSpire
 
 ![The PlantSpire Logo](https://github.com/AudunTA/PlantSpire_p/blob/master/images/logo.png "Logo")
 
