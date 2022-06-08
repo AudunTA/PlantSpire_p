@@ -1,6 +1,6 @@
 # PlantSpire
 
-![The PlantSpire Logo](https://github.com/AudunTA/PlantSpire_p/blob/master/images/logo.png "Logo")
+![The PlantSpire homepage](https://github.com/AudunTA/PlantSpire_p/blob/master/images/plantSpire2_00000.png "Logo")
 
 
 
