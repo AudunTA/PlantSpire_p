@@ -34,7 +34,7 @@ To install the projects;
  ```
 2. Open the project in your code editor:
 ```
-run on your local server, you cannot commit on this project
+run index.html in your browser
 ```
 
 
